@@ -223,7 +223,7 @@ $ss=$this->settings;
 		$this->yellowBed=1;
 		$this->all=array();
    $this->inWaiting=array();
-		$this->getServer()->getLogger()->info(TextFormat::GREEN."[FineBedWars] Загружено!");
+		$this->getServer()->getLogger()->info(TextFormat::GREEN."[BedWars] spusteno!");
 	}
 
 public function checkMove(PlayerMoveEvent $e){
@@ -264,7 +264,7 @@ $rp=count($this->red);
 $bp=count($this->blue);
 $gp=count($this->green);
 $yp=count($this->yellow);
-$status=$rb." §c".$rp." §f| ".$bb." §b".$bp." §f| ".$gb." §a".$gp." §f| ".$yb." §e".$yp;
+$status=$rb." §c".$rp." §f| ".$bb." ".$bp." §f| ".$gb." §a".$gp." §f| ".$yb." §e".$yp;
 $p->sendPopup($status);
 }
 }
@@ -296,7 +296,7 @@ $x=$ent->getX();
 $y=$ent->getY();
 $z=$ent->getZ();
 if($x<150 && $x>50 && $z<150 && $z>50){
-$ent->setNameTag("§l§bPlayers in waiting: §c".count($this->red)."§f/§b".count($this->blue)."§f/§a".count($this->green)."§f/§e".count($this->yellow));
+$ent->setNameTag("§l§bHraci v cekani: §c".count($this->red)."§f/§b".count($this->blue)."§f/§a".count($this->green)."§f/§e".count($this->yellow));
 }
 }
 }
@@ -398,7 +398,7 @@ $this->tptoland($pla,$this->yellowpos);
 }
 if($this->gameStatus>=2 && $pla->getX()>=200 && $pla->getZ()>=200){
 foreach($this->getServer()->getOnlinePlayers() as $kek){
-$kek->sendMessage("[§cBed§fWars] ".$pla->getNameTag()." §fумер");
+$kek->sendMessage("[§cBed§fWars] ".$pla->getNameTag()." §fzemrel");
 }
 }
 }
@@ -466,7 +466,7 @@ $this->tptoland($p,$this->yellowpos);
 }else{$p->kill();}
 }
 foreach($this->getServer()->getOnlinePlayers() as $kek){
-$kek->sendMessage("[§cBed§fWars] ".$p->getNameTag()." §fубит игроком ".$k->getNameTag());
+$kek->sendMessage("[§cBed§fWars] ".$p->getNameTag()." §fzabit hracem ".$k->getNameTag());
 }
 }
 }
@@ -681,10 +681,10 @@ $level->addParticle(new \pocketmine\level\particle\DestroyBlockParticle(new Vect
 //$level->setBlock(new Vector3($x-1,$y,$z),Block::get(0));
 $level->addParticle(new \pocketmine\level\particle\DestroyBlockParticle(new Vector3($x-1,$y,$z), Block::get(26)));
 foreach($this->getServer()->getOnlinePlayers() as $kek){
-$kek->sendMessage("[§cBed§fWars] §cКрасная §fкровать разрушена игроком ".$p->getNameTag());
+$kek->sendMessage("[§cBed§fWars] §cCervena §fpostel byla znicena hracem ".$p->getNameTag());
 }
 }else{
-$event->getPlayer()->sendTip("§cВы не можете разрушить свою кровать!");
+$event->getPlayer()->sendTip("§cNemuzes znicit vlastni postel!");
 $event->setCancelled();
 }
 }
@@ -703,10 +703,10 @@ $level->addParticle(new \pocketmine\level\particle\DestroyBlockParticle(new Vect
 //$level->setBlock(new Vector3($x,$y,$z-1),Block::get(0));
 $level->addParticle(new \pocketmine\level\particle\DestroyBlockParticle(new Vector3($x,$y,$z-1), Block::get(26)));
 foreach($this->getServer()->getOnlinePlayers() as $kek){
-$kek->sendMessage("[§cBed§fWars] §bСиняя §fкровать разрушена игроком ".$p->getNameTag());
+$kek->sendMessage("[§cBed§fWars] §9Modra §fpostel byla znicena hracem ".$p->getNameTag());
 }
 }else{
-$event->getPlayer()->sendTip("§cВы не можете разрушить свою кровать!");
+$event->getPlayer()->sendTip("§cNemuzes znicit vlastni postel!");
 $event->setCancelled();
 }
 }
@@ -725,10 +725,10 @@ $level->addParticle(new \pocketmine\level\particle\DestroyBlockParticle(new Vect
 //$level->setBlock(new Vector3($x,$y,$z-1),Block::get(0));
 $level->addParticle(new \pocketmine\level\particle\DestroyBlockParticle(new Vector3($x,$y,$z-1), Block::get(26)));
 foreach($this->getServer()->getOnlinePlayers() as $kek){
-$kek->sendMessage("[§cBed§fWars] §aЗеленая §fкровать разрушена игроком ".$p->getNameTag());
+$kek->sendMessage("[§cBed§fWars] §2Zelena §fpostel byla znicena hracem ".$p->getNameTag());
 }
 }else{
-$event->getPlayer()->sendTip("§cВы не можете разрушить свою кровать!");
+$event->getPlayer()->sendTip("§cNemuzes znicit vlastni postel!");
 $event->setCancelled();
 }
 }
@@ -746,10 +746,10 @@ $level->addParticle(new \pocketmine\level\particle\DestroyBlockParticle(new Vect
 //$level->setBlock(new Vector3($x-1,$y,$z),Block::get(0));
 $level->addParticle(new \pocketmine\level\particle\DestroyBlockParticle(new Vector3($x-1,$y,$z), Block::get(26)));
 foreach($this->getServer()->getOnlinePlayers() as $kek){
-$kek->sendMessage("[§cBed§fWars] §eЖелтая §fкровать разрушена игроком ".$p->getNameTag());
+$kek->sendMessage("[§cBed§fWars] §eЖZluta §fpostel byla znicena hracem ".$p->getNameTag());
 }
 }else{
-$event->getPlayer()->sendTip("§cВы не можете разрушить свою кровать!");
+$event->getPlayer()->sendTip("§cNemuzes znicit vlastni postel!");
 $event->setCancelled();
 }
 }
@@ -770,7 +770,7 @@ $p->teleport($pos);
 $p=$event->getPlayer();
 if($p->getY()<10){
 $p->teleport(new Vector3(0.5,64.5,0.5));
-$this->getServer()->getLogger()->info("Игрок ".$p->getName()." телепортнут на спавн");
+$this->getServer()->getLogger()->info("Игрок ".$p->getName()." teleportnut na spawn");
 }
 $effect=Effect::getEffect(1);$effect->setDuration(1);$effect->setAmplifier(50);$effect->setVisible(false);$p->addEffect($effect);
 $effect=Effect::getEffect(2);$effect->setDuration(1);$effect->setAmplifier(50);$effect->setVisible(false);$p->addEffect($effect);
@@ -1012,7 +1012,7 @@ $ent->setNameTag("§cGame was started!");
 				$this->players=count($this->red)+count($this->blue)+count($this->green)+count($this->yellow);
 		foreach($this->all as $p){
 		foreach($this->getServer()->getOnlinePlayers() as $pla){
-$pla->sendTip("  §aИгра началась!\n§bИгроков на карте: §f".$this->players);
+$pla->sendTip("  §aHra zacala!\n§bHraci na mape: §f".$this->players);
 		}
 }
 foreach($this->red as $num => $red){$this->getServer()->getPlayer($red)->teleport($this->redpos);$this->getServer()->getPlayer($red)->teleport($this->redpos);$this->getServer()->getPlayer($red)->teleport($this->redpos);}
@@ -1031,7 +1031,7 @@ foreach($this->yellow as $num => $yellow){$this->getServer()->getPlayer($yellow)
 		if($this->gameStatus>=2){
 			if(count($this->blue)==0 && count($this->green)==0 && count($this->yellow)==0){
 		foreach($this->getServer()->getOnlinePlayers() as $pla){
-$pla->sendMessage("[§cBed§fWars] §aВ игре на карте ".$this->settings['name']." §aпобедила команда §cКрасных§a!");
+$pla->sendMessage("[§cBed§fWars] §aNa mape ".$this->settings['name']." §avyhral tym §ccervenych§a!");
 		}
                 $this->allBack();
 				$this->red=array();
@@ -1046,7 +1046,7 @@ $pla->sendMessage("[§cBed§fWars] §aВ игре на карте ".$this->setti
 			}
 			elseif(count($this->red)==0 && count($this->green)==0 && count($this->yellow)==0){
 		foreach($this->getServer()->getOnlinePlayers() as $pla){
-$pla->sendMessage("[§cBed§fWars] §aВ игре на карте ".$this->settings['name']." §aпобедила команда §bСиних§a!");
+$pla->sendMessage("[§cBed§fWars] §aNa mape ".$this->settings['name']." §avyhral tym §9modrych§a!");
 		}
                 $this->allBack();
 				$this->red=array();
@@ -1061,7 +1061,7 @@ $pla->sendMessage("[§cBed§fWars] §aВ игре на карте ".$this->setti
 			}
 			elseif(count($this->red)==0 && count($this->blue)==0 && count($this->yellow)==0){
 		foreach($this->getServer()->getOnlinePlayers() as $pla){
-$pla->sendMessage("[§cBed§fWars] §aВ игре на карте ".$this->settings['name']." §aпобедила команда §aЗеленых§a!");
+$pla->sendMessage("[§cBed§fWars] §aNa mape ".$this->settings['name']." §avyhral tym §2zelenych§a!");
 		}
                 $this->allBack();
 				$this->red=array();
@@ -1076,7 +1076,7 @@ $pla->sendMessage("[§cBed§fWars] §aВ игре на карте ".$this->setti
 			}
 			elseif(count($this->red)==0 && count($this->blue)==0 && count($this->green)==0){
 		foreach($this->getServer()->getOnlinePlayers() as $pla){
-$pla->sendMessage("[§cBed§fWars] §aВ игре на карте ".$this->settings['name']." §aпобедила команда §eЖелтых§a!");
+$pla->sendMessage("[§cBed§fWars] §aNa mape ".$this->settings['name']." §avyhral tym §ezlutych§a!");
 		}
                 $this->allBack();
 				$this->red=array();
@@ -1116,7 +1116,7 @@ $pla->sendMessage("[§cBed§fWars] §aВ игре на карте ".$this->setti
 			case 30:
 		foreach($this->all as $p){
 		foreach($this->getServer()->getOnlinePlayers() as $pla){
-$pla->sendTip("§aДо конца игры §f".$this->lastTime." §aсек!");
+$pla->sendTip("§aDo konce zbyva §f".$this->lastTime." §asekund!");
 		}
 }
                 break;
@@ -1125,7 +1125,7 @@ $pla->sendTip("§aДо конца игры §f".$this->lastTime." §aсек!");
 			case 60:
 		foreach($this->all as $p){
 		foreach($this->getServer()->getOnlinePlayers() as $pla){
-$pla->sendTip("§aДо конца игры §f1 §aминута!");
+$pla->sendTip("§aDo konce zbyva jen§f1 §aminuta!");
 		}
 }
 
@@ -1135,7 +1135,7 @@ $pla->sendTip("§aДо конца игры §f1 §aминута!");
 			case 120:
 		foreach($this->all as $p){
 		foreach($this->getServer()->getOnlinePlayers() as $pla){
-$pla->sendTip("§aДо конца игры §f2 §aминуты!");
+$pla->sendTip("§aDo konce zbyvaji jen §f2 §aminuty!");
 		}
 }
                 break;
@@ -1144,7 +1144,7 @@ $pla->sendTip("§aДо конца игры §f2 §aминуты!");
 			case 180:
 		foreach($this->all as $p){
 		foreach($this->getServer()->getOnlinePlayers() as $pla){
-$pla->sendTip("§aДо конца игры §f3 §aминуты!");
+$pla->sendTip("§aDo konce zbyvaji jen §f3 §aminuty!");
 		}
 }
                 break;
@@ -1153,7 +1153,7 @@ $pla->sendTip("§aДо конца игры §f3 §aминуты!");
 			case 300:
 		foreach($this->all as $p){
 		foreach($this->getServer()->getOnlinePlayers() as $pla){
-$pla->sendTip("§aДо конца игры §f5 §aминут!");
+$pla->sendTip("§aDo konce zbyva jen §f5 §aminut!");
 		}
 }
                 break;
@@ -1162,13 +1162,13 @@ $pla->sendTip("§aДо конца игры §f5 §aминут!");
 			case 600:
 		foreach($this->all as $p){
 		foreach($this->getServer()->getOnlinePlayers() as $pla){
-$pla->sendTip("§aДо конца игры §f10 §aминут!");
+$pla->sendTip("§aDo konce zbyva jen §f10 §minut!");
 		}
 }
                 break;
 			case 0:
 		foreach($this->getServer()->getOnlinePlayers() as $pla){
-$pla->sendMessage("[§cBed§fWars] §aВ игре на карте ".$this->settings['name']." §aне победила ни одна команда!");
+$pla->sendMessage("[§cBed§fWars] §aNa mape ".$this->settings['name']." §anevyhral bouhzel zadny tym!");
 }
                 $this->allBack();
 				$this->red=array();
@@ -1264,7 +1264,7 @@ if($this->gameStatus <= 1){
 		foreach($this->all as $num => $pl){if($pl==$p->getName()){array_splice($this->all,$num,1);}}
  		array_push($this->red,$event->getPlayer()->getName());
 		array_push($this->all,$event->getPlayer()->getName());
-$event->getPlayer()->sendMessage("[§cBed§fWars] Вы присоединились к §cКрасной §fкоманде");
+$event->getPlayer()->sendMessage("[§cBed§fWars] Pripojil si se k §ccervenemu §ftymu");
 $p->setNameTag("§c".$p->getName());
 if(
 count($this->red)>0 && count($this->blue)>0 && count($this->green)==0 && count($this->yellow)==0 && $this->lastTime==0 ||
@@ -1279,7 +1279,7 @@ count($this->red)==0 && count($this->blue)==0 && count($this->green)>0 && count(
 }
 }
 else{
-$event->getPlayer()->sendMessage("[§cBed§fWars] §cНа этой карте уже слишком много Красных!");
+$event->getPlayer()->sendMessage("[§cBed§fWars] §4Cerveny §ctym je plny!");
 }
 }
    elseif($block->getId()==35 && $block->getDamage()==11){
@@ -1291,8 +1291,8 @@ $event->getPlayer()->sendMessage("[§cBed§fWars] §cНа этой карте у
 		foreach($this->all as $num => $pl){if($pl==$p->getName()){array_splice($this->all,$num,1);}}
 		array_push($this->blue,$event->getPlayer()->getName());
 		array_push($this->all,$event->getPlayer()->getName());
-$event->getPlayer()->sendMessage("[§cBed§fWars] Вы присоединились к §bСиней §fкоманде");
-$p->setNameTag("§b".$p->getName());
+$event->getPlayer()->sendMessage("[§cBed§fWars] Pripojil si se k §9modremu §ftymu");
+$p->setNameTag("§9".$p->getName());
 if(
 count($this->red)>0 && count($this->blue)>0 && count($this->green)==0 && count($this->yellow)==0 && $this->lastTime==0 ||
 count($this->red)>0 && count($this->blue)==0 && count($this->green)>0 && count($this->yellow)==0 && $this->lastTime==0 ||
@@ -1306,7 +1306,7 @@ count($this->red)==0 && count($this->blue)==0 && count($this->green)>0 && count(
 }
 }
 else{
-$event->getPlayer()->sendMessage("[§cBed§fWars] §cНа этой карте уже слишком много §bСиних§c!");
+$event->getPlayer()->sendMessage("[§cBed§fWars] §9Modry§c tym je plny!");
 }
 }
    elseif($block->getId()==35 && $block->getDamage()==5){
@@ -1318,8 +1318,8 @@ $event->getPlayer()->sendMessage("[§cBed§fWars] §cНа этой карте у
 		foreach($this->all as $num => $pl){if($pl==$p->getName()){array_splice($this->all,$num,1);}}
 		array_push($this->green,$event->getPlayer()->getName());
 		array_push($this->all,$event->getPlayer()->getName());
-$event->getPlayer()->sendMessage("[§cBed§fWars] Вы присоединились к §aЗеленой §fкоманде");
-$p->setNameTag("§a".$p->getName());
+$event->getPlayer()->sendMessage("[§cBed§fWars] Pripojil si se k §2zelenemu §ftymu");
+$p->setNameTag("§2".$p->getName());
 if(
 count($this->red)>0 && count($this->blue)>0 && count($this->green)==0 && count($this->yellow)==0 && $this->lastTime==0 ||
 count($this->red)>0 && count($this->blue)==0 && count($this->green)>0 && count($this->yellow)==0 && $this->lastTime==0 ||
@@ -1333,7 +1333,7 @@ count($this->red)==0 && count($this->blue)==0 && count($this->green)>0 && count(
 }
 }
 else{
-$event->getPlayer()->sendMessage("[§cBed§fWars] §cНа этой карте уже слишком много §aЗеленых§c!");
+$event->getPlayer()->sendMessage("[§cBed§fWars] §2Zeleny§c tym je plny!");
 }
 }
    elseif($block->getId()==35 && $block->getDamage()==4){
@@ -1345,7 +1345,7 @@ $event->getPlayer()->sendMessage("[§cBed§fWars] §cНа этой карте у
 		foreach($this->all as $num => $pl){if($pl==$p->getName()){array_splice($this->all,$num,1);}}
 		array_push($this->yellow,$event->getPlayer()->getName());
 		array_push($this->all,$event->getPlayer()->getName());
-$event->getPlayer()->sendMessage("[§cBed§fWars] Вы присоединились к §eЖелтой §fкоманде");
+$event->getPlayer()->sendMessage("[§cBed§fWars] Pripojil si se k §ezlutemu§f tymu");
 $p->setNameTag("§e".$p->getName());
 if(
 count($this->red)>0 && count($this->blue)>0 && count($this->green)==0 && count($this->yellow)==0 && $this->lastTime==0 ||
@@ -1360,13 +1360,13 @@ count($this->red)==0 && count($this->blue)==0 && count($this->green)>0 && count(
 }
 }
 else{
-$event->getPlayer()->sendMessage("[§cBed§fWars] §cНа этой карте уже слишком много §eЖелтых§c!");
+$event->getPlayer()->sendMessage("[§cBed§fWars] §eZluty§c tym je plny!");
 }
 }
  }
 if($this->gameStatus >= 2){
    if($block->getId()==35 && $block->getDamage()==14 || $block->getId()==35 && $block->getDamage()==11 || $block->getId()==35 && $block->getDamage()==5 || $block->getId()==35 && $block->getDamage()==4){
-$p->sendMessage("[§cBed§fWars] §cИгра уже идет!");
+$p->sendMessage("[§cBed§fWars] §cHra jiz probiha!");
 }
  }
   }
@@ -1415,7 +1415,7 @@ $this->getServer()->getPlayer($p)->getInventory()->setContents(array(Item::get(0
 }
 
 	public function onDisable(){
-		$this->getServer()->getLogger()->info(TextFormat::RED."[FineBedWars] Выключено !");
+		$this->getServer()->getLogger()->info(TextFormat::RED."[BedWars] Vypnuto!");
 	}
 
     public function replace(){
