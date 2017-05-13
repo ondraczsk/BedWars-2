@@ -161,7 +161,7 @@ $p->getInventory()->setItem(33,$item);
 $p->getInventory()->setItem(34,$item);
 $p->getInventory()->setItem(35,$item);
 $p->getInventory()->setHotbarSlotIndex(0, 35);
-$p->sendTip("§aОткройте свой инвентарь для покупок!");
+$p->sendTip("§aOtevri inventar pro nakup!");
 }
 }
 if($this->isInShop($p)==true){
@@ -373,9 +373,9 @@ $item=Item::get(24,0,2);
 if($this->PayBro[$p->getName()]>=1){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayBro[$p->getName()] = $this->PayBro[$p->getName()] -1;
-$p->sendPopup("§bВы купили §eSandstone §fx2!");
+$p->sendPopup("§bKoupil sis §eSandstone §fx2!");
 }else{
-$p->sendPopup("§cВы не имеете §fБронзы §cдля покупки этого!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 }
 
@@ -384,9 +384,9 @@ $item=Item::get(121,0,1);
 if($this->PayBro[$p->getName()]>=7){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayBro[$p->getName()] = $this->PayBro[$p->getName()] -7;
-$p->sendPopup("§bВы купили §fEnd Stone!");
+$p->sendPopup("§bKoupil sis §fEnd Stone!");
 }else{
-$p->sendPopup("§cВы не имеете §fБронзы §cдля покупки этого!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 }
 
@@ -414,13 +414,13 @@ $item=Item::get(270,0,1);
 if($this->PayBro[$p->getName()]>=4){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayBro[$p->getName()] = $this->PayBro[$p->getName()] -4;
-$p->sendPopup("§bВы купили §6Wooden Pickaxe§f!");
+$p->sendPopup("§bKoupil sis §6Wooden Pickaxe§f!");
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fBronze §cfor buy this!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fБронзы §cдля покупки этого!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 }
 }
@@ -432,17 +432,17 @@ if($this->PayIron[$p->getName()]>=2){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -2;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §7Stone Pickaxe§f!");
+$p->sendPopup("§bKoupil sis §7Stone Pickaxe§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §7Stone Pickaxe§f!");
+$p->sendPopup("§bKoupil sis §7Stone Pickaxe§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 }
 }
@@ -453,17 +453,17 @@ if($this->PayGold[$p->getName()]>=1){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayGold[$p->getName()] = $this->PayGold[$p->getName()] -1;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §fIron Pickaxe§f!");
+$p->sendPopup("§bKoupil sis §fIron Pickaxe§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §fIron Pickaxe§f!");
+$p->sendPopup("§bKoupil sis §fIron Pickaxe§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §eGold §cfor buy this!");
+$p->sendPopup("§c§cNemas §eZlato §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §eЗолота §cдля покупки этого!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 }
 }
@@ -493,17 +493,17 @@ if($this->PayBro[$p->getName()]>=1){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayBro[$p->getName()] = $this->PayBro[$p->getName()] -1;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §6Leather Cap§f!");
+$p->sendPopup("§bKoupil sis §6Leather Cap§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §6Leather Cap§f!");
+$p->sendPopup("§bKoupil sis §6Leather Cap§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fBronze §cfor buy this!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fБронзы §cдля покупки этого!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 }
 }
@@ -514,17 +514,17 @@ if($this->PayBro[$p->getName()]>=1){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayBro[$p->getName()] = $this->PayBro[$p->getName()] -1;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §6Leather Leggins§f!");
+$p->sendPopup("§bKoupil sis §6Leather Leggins§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §6Leather Leggins§f!");
+$p->sendPopup("§bKoupil sis §6Leather Leggins§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fBronze §cfor buy this!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fБронзы §cдля покупки этого!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 }
 }
@@ -535,17 +535,17 @@ if($this->PayBro[$p->getName()]>=1){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayBro[$p->getName()] = $this->PayBro[$p->getName()] -1;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §6Leather Boots§f!");
+$p->sendPopup("§bKoupil sis §6Leather Boots§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §6Leather Boots§f!");
+$p->sendPopup("§bKoupil sis §6Leather Boots§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fBronze §cfor buy this!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fБронзы §cдля покупки этого!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 }
 }
@@ -556,17 +556,17 @@ if($this->PayIron[$p->getName()]>=1){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -1;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §fChain Chestplate§f!");
+$p->sendPopup("§bKoupil sis §fChain Chestplate§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §fChain Chestplate§f!");
+$p->sendPopup("§bKoupil sis §fChain Chestplate§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 }
 }
@@ -577,17 +577,17 @@ if($this->PayIron[$p->getName()]>=3){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -3;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §fIron Chestplate§f!");
+$p->sendPopup("§bKoupil sis §fIron Chestplate§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §fIron Chestplate§f!");
+$p->sendPopup("§bKoupil sis §fIron Chestplate§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 }
 }
@@ -598,17 +598,17 @@ if($this->PayIron[$p->getName()]>=7){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -7;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §bDiamond Chestplate§f!");
+$p->sendPopup("§bKoupil sis §bDiamond Chestplate§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §bDiamond Chestplate§f!");
+$p->sendPopup("§bKoupil sis §bDiamond Chestplate§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 }
 }
@@ -636,17 +636,17 @@ if($this->PayBro[$p->getName()]>=8){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayBro[$p->getName()] = $this->PayBro[$p->getName()] -8;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §6Stick§f!");
+$p->sendPopup("§bKoupil sis §6Stick§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §6Stick§f!");
+$p->sendPopup("§bKoupil sis §6Stick§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fBronze §cfor buy this!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fБронзы §cдля покупки этого!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 }
 }
@@ -657,17 +657,17 @@ if($this->PayIron[$p->getName()]>=1){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -1;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §7Stone Sword§f!");
+$p->sendPopup("§bKoupil sis §7Stone Sword§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §7Stone Sword§f!");
+$p->sendPopup("§bKoupil sis §7Stone Sword§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 }
 }
@@ -678,17 +678,17 @@ if($this->PayIron[$p->getName()]>=3){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -3;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §fIron Sword§f!");
+$p->sendPopup("§bKoupil sis §fIron Sword§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §fIron Sword§f!");
+$p->sendPopup("§bKoupil sis §fIron Sword§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 }
 }
@@ -699,17 +699,17 @@ if($this->PayGold[$p->getName()]>=5){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayGold[$p->getName()] = $this->PayGold[$p->getName()] -5;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §bDiamond Sword§f!");
+$p->sendPopup("§bKoupil sis §bDiamond Sword§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §bDiamond Sword§f!");
+$p->sendPopup("§bKoupil sis §bDiamond Sword§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §eGold §cfor buy this!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §eЗолота §cдля покупки этого!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 }
 }
@@ -735,17 +735,17 @@ if($this->PayGold[$p->getName()]>=3){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayGold[$p->getName()] = $this->PayGold[$p->getName()] -3;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §fBow§f!");
+$p->sendPopup("§bKoupil sis §fBow§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §fBow§f!");
+$p->sendPopup("§bKoupil sis §fBow§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §eGold §cfor buy this!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §eЗолота §cдля покупки этого!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 }
 }
@@ -756,17 +756,17 @@ if($this->PayGold[$p->getName()]>=1){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayGold[$p->getName()] = $this->PayGold[$p->getName()] -1;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §fEndless Arrow§f!");
+$p->sendPopup("§bKoupil sis §fEndless Arrow§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §fEndless Arrow§f!");
+$p->sendPopup("§bKoupil sis §fEndless Arrow§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §eGold §cfor buy this!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §eЗолота §cдля покупки этого!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 }
 }
@@ -792,17 +792,18 @@ if($this->PayBro[$p->getName()]>=1){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayBro[$p->getName()] = $this->PayBro[$p->getName()] -1;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §cApple§f!");
+$p->sendPopup("§bKoupil sis §cApple§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §cApple§f!");
+$p->sendPopup("§bKoupil sis §cApple§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fBronze §cfor buy this!");
-}
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
+}
+
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fБронзы §cдля покупки этого!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 }
 }
@@ -813,17 +814,17 @@ if($this->PayBro[$p->getName()]>=2){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayBro[$p->getName()] = $this->PayBro[$p->getName()] -2;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §6Cooked Porkchop§f!");
+$p->sendPopup("§bKoupil sis §6Cooked Porkchop§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §6Cooked Porkchop§f!");
+$p->sendPopup("§bKoupil sis §6Cooked Porkchop§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fBronze §cfor buy this!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fBronze §cдля покупки этого!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 }
 }
@@ -834,17 +835,17 @@ if($this->PayIron[$p->getName()]>=1){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -1;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §fCake§f!");
+$p->sendPopup("§bKoupil sis §fCake§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §fCake§f!");
+$p->sendPopup("§bKoupil sis §fCake§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 }
 }
@@ -870,17 +871,17 @@ if($this->PayIron[$p->getName()]>=1){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -1;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §6Chest§f!");
+$p->sendPopup("§bKoupil sis §6Chest§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §6Chest§f!");
+$p->sendPopup("§bKoupil sis §6Chest§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 }
 }
@@ -908,17 +909,17 @@ if($this->PayIron[$p->getName()]>=3){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -3;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §cHealing Potion I§f!");
+$p->sendPopup("§bKoupil sis §cHealing Potion I§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §cHealing Potion I§f!");
+$p->sendPopup("§bKoupil sis §cHealing Potion I§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 }
 }
@@ -929,17 +930,17 @@ if($this->PayIron[$p->getName()]>=5){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -5;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §cHealing Potion II§f!");
+$p->sendPopup("§bKoupil sis §cHealing Potion II§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §cHealing Potion II§f!");
+$p->sendPopup("§bKoupil sis §cHealing Potion II§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 }
 }
@@ -950,17 +951,17 @@ if($this->PayIron[$p->getName()]>=7){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -7;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §bPotion of Swiftness II§f!");
+$p->sendPopup("§bKoupil sis §bPotion of Swiftness II§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §bPotion of Swiftness II§f!");
+$p->sendPopup("§bKoupil sis §bPotion of Swiftness II§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 }
 }
@@ -971,17 +972,17 @@ if($this->PayGold[$p->getName()]>=7){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayGold[$p->getName()] -7;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §cPotion of Strength II§f!");
+$p->sendPopup("§bKoupil sis §cPotion of Strength II§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §cPotion of Strength II§f!");
+$p->sendPopup("§bKoupil sis §cPotion of Strength II§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §eGold §cfor buy this!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §eЗолота §cдля покупки этого!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 }
 }
@@ -1013,17 +1014,17 @@ if($this->PayBro[$p->getName()]>=1){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayBro[$p->getName()] = $this->PayBro[$p->getName()] -1;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §6Ladder§f!");
+$p->sendPopup("§bKoupil sis §6Ladder§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §6Ladder§f!");
+$p->sendPopup("§bKoupil sis §6Ladder§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fBronze §cfor buy this!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fБронзы §cдля покупки этого!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 }
 }
@@ -1034,17 +1035,17 @@ if($this->PayBro[$p->getName()]>=16){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayBro[$p->getName()] = $this->PayBro[$p->getName()] -16;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §fWeb§f!");
+$p->sendPopup("§bKoupil sis §fSit§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §fWeb§f!");
+$p->sendPopup("§bKoupil sis §fSit§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fBronze §cfor buy this!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fБронзы §cдля покупки этого!");
+$p->sendPopup("§cNemas §fBronz §cpro nakup!");
 }
 }
 }
@@ -1055,17 +1056,17 @@ if($this->PayIron[$p->getName()]>=3){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -3;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §fReturn Powder§f!");
+$p->sendPopup("§bKoupil sis §fReturn Powder§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §fReturn Powder§f!");
+$p->sendPopup("§bKoupil sis §fReturn Powder§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 }
 }
@@ -1076,17 +1077,17 @@ if($this->PayIron[$p->getName()]>=5){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayIron[$p->getName()] = $this->PayIron[$p->getName()] -5;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §fBlinding Trap§f!");
+$p->sendPopup("§bKoupil sis §fBlinding Trap§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §fBlinding Trap§f!");
+$p->sendPopup("§bKoupil sis §fBlinding Trap§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §fIron §cfor buy this!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §fЖелеза §cдля покупки этого!");
+$p->sendPopup("§cNemas §fZelezo §cpro nakup!");
 }
 }
 }
@@ -1097,17 +1098,17 @@ if($this->PayGold[$p->getName()]>=3){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayGold[$p->getName()] = $this->PayGold[$p->getName()] -3;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §cSaving Stick§f!");
+$p->sendPopup("§bKoupil sis §cSaving Stick§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §cSaving Stick§f!");
+$p->sendPopup("§bKoupil sis §cSaving Stick§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §eGold §cfor buy this!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §eЗолота §cдля покупки этого!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 }
 }
@@ -1118,17 +1119,17 @@ if($this->PayGold[$p->getName()]>=9){
 array_push($this->Buyed[$p->getName()],$item);
 $this->PayGold[$p->getName()] = $this->PayGold[$p->getName()] -9;
 if($lang=="eng"){
-$p->sendPopup("§bYou was bought §dEnder Pearl§f!");
+$p->sendPopup("§bKoupil sis §dEnder Pearl§f!");
 }
 if($lang=="rus"){
-$p->sendPopup("§bВы купили §dEnder Pearl§f!");
+$p->sendPopup("§bKoupil sis §dEnder Pearl§f!");
 }
 }else{
 if($lang=="eng"){
-$p->sendPopup("§cYou haven't §eGold §cfor buy this!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 if($lang=="rus"){
-$p->sendPopup("§cВы не имеете §eЗолота §cдля покупки этого!");
+$p->sendPopup("§cNemas §eZlato §cpro nakup!");
 }
 }
 }
