@@ -80,10 +80,10 @@ class FineBedWars extends PluginBase implements Listener
 		return self::$obj;
 	}
     public function onLoad(){
-copy($this->getServer()->getDataPath().'worlds/world/copy/r.1.1.mcr',$this->getServer()->getDataPath().'worlds/world/region/r.1.1.mcr');
-copy($this->getServer()->getDataPath().'worlds/world/copy/r.1.2.mcr',$this->getServer()->getDataPath().'worlds/world/region/r.1.2.mcr');
-copy($this->getServer()->getDataPath().'worlds/world/copy/r.2.1.mcr',$this->getServer()->getDataPath().'worlds/world/region/r.2.1.mcr');
-copy($this->getServer()->getDataPath().'worlds/world/copy/r.2.2.mcr',$this->getServer()->getDataPath().'worlds/world/region/r.2.2.mcr');
+copy($this->getServer()->getDataPath().'worlds/bw/copy/r.1.1.mcr',$this->getServer()->getDataPath().'worlds/bw/region/r.1.1.mcr');
+copy($this->getServer()->getDataPath().'worlds/bw/copy/r.1.2.mcr',$this->getServer()->getDataPath().'worlds/bw/region/r.1.2.mcr');
+copy($this->getServer()->getDataPath().'worlds/bw/copy/r.2.1.mcr',$this->getServer()->getDataPath().'worlds/bw/region/r.2.1.mcr');
+copy($this->getServer()->getDataPath().'worlds/bw/copy/r.2.2.mcr',$this->getServer()->getDataPath().'worlds/bw/region/r.2.2.mcr');
 }
 	public function onEnable()
 	{
@@ -1427,10 +1427,10 @@ $this->getServer()->getPlayer($p)->getInventory()->setContents(array(Item::get(0
     }
 
     public function load(){
-copy($this->getServer()->getDataPath().'worlds/world/copy/r.1.1.mcr',$this->getServer()->getDataPath().'worlds/world/region/r.1.1.mcr');
-copy($this->getServer()->getDataPath().'worlds/world/copy/r.1.2.mcr',$this->getServer()->getDataPath().'worlds/world/region/r.1.2.mcr');
-copy($this->getServer()->getDataPath().'worlds/world/copy/r.2.1.mcr',$this->getServer()->getDataPath().'worlds/world/region/r.2.1.mcr');
-copy($this->getServer()->getDataPath().'worlds/world/copy/r.2.2.mcr',$this->getServer()->getDataPath().'worlds/world/region/r.2.2.mcr');
+copy($this->getServer()->getDataPath().'worlds/bw/copy/r.1.1.mcr',$this->getServer()->getDataPath().'worlds/bw/region/r.1.1.mcr');
+copy($this->getServer()->getDataPath().'worlds/bw/copy/r.1.2.mcr',$this->getServer()->getDataPath().'worlds/bw/region/r.1.2.mcr');
+copy($this->getServer()->getDataPath().'worlds/bw/copy/r.2.1.mcr',$this->getServer()->getDataPath().'worlds/bw/region/r.2.1.mcr');
+copy($this->getServer()->getDataPath().'worlds/bw/copy/r.2.2.mcr',$this->getServer()->getDataPath().'worlds/bw/region/r.2.2.mcr');
            $this->getServer ()->getScheduler ()->scheduleDelayedTask ( new FineTask ( [ $this, "stop" ]), 20 ); 
     }
 
